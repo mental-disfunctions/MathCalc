@@ -8,21 +8,21 @@
 }
 header {
     width: 100%;
-    height: 100px;
+    height: 70px;
     background: #1e8c45;
     display: flex;
     align-items: center;
     padding: 0 2%;
-    border-bottom: white solid;
     gap: 10%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 header .logo {
     background-image: url(../image/logo.png);
     background-size: contain;
     background-repeat: no-repeat;
     height: 70px;
-    width: 150px;
-    margin-top: 0px;
+    width: 120px;
+    margin-top: 10px;
     cursor:default;
     user-select: none;
     display: flex;
@@ -101,9 +101,8 @@ body{
 }
 main{
     background-color: white;
-    display: flex;
     width: 100%;
-    height: 641.5px;
+    height: 1500px;
 }
 .bob{
     width: 30%;
@@ -113,9 +112,6 @@ main{
 }
 .d-flex{
     display: flex;
-}
-.row-padding{
-    padding: r;
 }
 .bgc-white{
     background-color: white;
@@ -134,14 +130,32 @@ main{
     text-align: center;
 }
 .border{
-    border: solid 3px #1e8c45; 
+    border: solid 3px #176a34; 
 }
 .cont{
     width: 100%;
-    height: 100px;
+    height: 70px;
 }
 .bo-left-none{
     border-left: none;
+}
+.bo-top-none{
+    border-top: none;
+}
+preview{
+    height: 180px;
+    background-color: blue;
+}
+main-cont{
+    height: 1320px;
+    background-color: #F0F6F6;
+}
+.margint{
+    margin-top: 40px;
+    color: black;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
 }
 /*desktop*/
 @media (min-width: 993px) {
