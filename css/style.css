@@ -189,7 +189,7 @@ calcs{
 
 }
 .list{
-    display:flexbo;
+    display: flexbox;
 }
 div ul li{
     font-size: 20px;
