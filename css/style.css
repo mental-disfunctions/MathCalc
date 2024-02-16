@@ -14,7 +14,7 @@ header {
     align-items: center;
     padding: 0 2%;
     gap: 10%;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 header .logo {
     background-image: url(../image/logo.png);
@@ -169,6 +169,10 @@ padding{
     grid-column-gap: 20px;
     grid-row-gap: 20px;
 }
+.grid-item:hover{
+    transition: .2s;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
 .padding-lr{
     padding-left: 10%;
     padding-right: 10%;
@@ -189,6 +193,13 @@ calcs{
 }
 div ul li{
     font-size: 20px;
+}
+.photo_geo{
+    background-image: url(../image/ry.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 50px;
+    border-radius: 10%;
 }
 /*desktop*/
 @media (min-width: 993px) {
