@@ -117,7 +117,7 @@ main{
     background-color: white;
 }
 .bgc-grey{
-    background-color: rgb(156, 155, 155);
+    background-color: #F5F5F5;
 }
 .box-shadow{
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
@@ -144,18 +144,51 @@ main{
 }
 preview{
     height: 180px;
-    background-color: blue;
+    background-color: white;
 }
 main-cont{
     height: 1320px;
     background-color: #F0F6F6;
+    
 }
-.margint{
-    margin-top: 40px;
+.font{
     color: black;
     font-weight: bold;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 25px;
+}
+padding{
+    padding: 2%;
+}
+.margint{
+    margin-top: 40px;
+}
+.d-grid{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+.padding-lr{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.grid-item{
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+  height: 300px;
+  background-color: white;
+  border-radius: 15%;
+}
+calcs{
+
+}
+.list{
+    display:flexbo;
+}
+div ul li{
+    font-size: 20px;
 }
 /*desktop*/
 @media (min-width: 993px) {
