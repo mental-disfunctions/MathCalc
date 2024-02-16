@@ -178,16 +178,40 @@ padding{
   height: 300px;
   background-color: white;
   border-radius: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 div ul li{
     font-size: 20px;
 }
 .photo_geo{
-    background-image: url(../image/ry.jpg);
+    background-image: url(../image/geo.png);
     background-repeat: no-repeat;
     background-size: contain;
-    height: 50px;
-    border-radius: 10%;
+    height: 100px;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.photo_algeb{
+    background-image: url(../image/math.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100px;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.photo_chismeth{
+    background-image: url(../image/chisel.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100px;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .calculators-container {
