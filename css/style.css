@@ -173,7 +173,6 @@ preview {
 main-cont {
     height: 1320px;
     background-color: #F0F6F6;
-
 }
 
 .font {
@@ -200,23 +199,25 @@ padding {
     padding-left: 10%;
     padding-right: 10%;
 }
-.grid-item{
-  padding: 10px;
-  font-size: 30px;
-  text-align: center;
-  height: 300px;
-  background-color: white;
-  border-radius: 15%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+
+.grid-item {
+    padding: 10px;
+    font-size: 30px;
+    text-align: center;
+    height: 300px;
+    background-color: white;
+    border-radius: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 div ul li {
     font-size: 20px;
 }
-.photo_geo{
+
+.photo_geo {
     background-image: url(../image/geo.png);
     background-repeat: no-repeat;
     background-size: contain;
@@ -225,7 +226,8 @@ div ul li {
     margin-left: auto;
     margin-right: auto;
 }
-.photo_algeb{
+
+.photo_algeb {
     background-image: url(../image/math.png);
     background-repeat: no-repeat;
     background-size: contain;
@@ -234,7 +236,8 @@ div ul li {
     margin-left: auto;
     margin-right: auto;
 }
-.photo_chismeth{
+
+.photo_chismeth {
     background-image: url(../image/chisel.png);
     background-repeat: no-repeat;
     background-size: contain;
