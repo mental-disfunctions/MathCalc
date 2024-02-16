@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: #1e8c45;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2%;
+    border-bottom: white solid;
+}
+header .logo {
+    background-image: url(../image/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 150px;
+    width: 150px;
+    margin-top: 85px;
+}
+.justify-c-center{
+    justify-content: center;
+}
+
+yellow {
+    color: blue;
+    font-size: 25px;
+}
+
+header .logo:hover {
+    transform: scale(1.2);
+}
+
+header nav ul li {
+    position: relative;
+    float: left;
+}
+
+nav {
+    font-size: 16px;
+}
+
+header nav ul li a {
+    padding: 15px;
+    color: white;
+    font-size: 16px;
+    display: block;
+}
+header nav ul li ul li a{
+    padding: 7px;
+}
+header nav ul li:last-child ul li a:last-child {
+    border-top: grey solid 1px;
+}
+
+header nav ul li a:hover {
+    background: black;
+    color: white;
+}
+
+nav ul li ul {
+    position: absolute;
+    left: 0;
+    width: 180px;
+    background: #1C1C1C;
+    display: none;
+    border-left: white solid;
+    border-right: white solid;
+    border-bottom: white solid;
+}
+
+nav ul li ul li {
+    width: 100%;
+    border: 1px solid rgva(1, 0, 0.1)
+}
+
+nav ul li ul li ul {
+    left: 180px;
+    top: 0;
+}
+
+nav ul li:hover>ul {
+    display: initial;
+}
