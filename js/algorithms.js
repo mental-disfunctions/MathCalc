@@ -1,20 +1,21 @@
 function halfDivisionMethod(func = "Math.pow(x, 3) - x - 1", a = 1, b = 2, e = 0.1) {
-    fn = Function("x", "return " + func + ";");
     const resultTable = new Object();
     const n = Math.ceil(Math.log2((b - a) / e));
+    givedFunction = Function("x", "return " + func + ";");
     for (let i = 1; i < n + 1; i++) {
+        const x = (a + b) / 2;
         resultTable[i] = {
             "n": i,
             "-": a,
             "+": b,
-            "x=a+b/2": (a + b) / 2,
-            "f(x)": fn((a + b) / 2),
+            "x=a+b/2": x,
+            "f(x)": givedFunction(x),
             "|b-a|": Math.abs(b - a)
         };
-        if (Math.sign(fn((a + b) / 2)) < 0) {
-            a = (a + b) / 2;
+        if (Math.sign(givedFunction(x) < 0)) {
+            a = x;
         } else {
-            b = (a + b) / 2;
+            b = x;
         }
     }
     return resultTable;
