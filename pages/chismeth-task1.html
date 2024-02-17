@@ -1,58 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <script src="../js/main.js"></script>
-    <title>Метод половинного поділу</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/style.css">
+	<script src="../js/main.js"></script>
+	<script src="../js/script.js"></script>
+	<title>Метод половинного поділу</title>
 </head>
+
 <body>
-    <header>
+	<header>
 
-        <a href="#" class="logo"></a>
+		<a href="#" class="logo"></a>
 
-        <nav>
-            <a href="calculator.html"><div class="photo_calc"></div></a>
-            <a href="#">1</a>
-            <a href="#">2</a>
-            <a href="#">3</a>
-        </nav>
-    </header>
-    <maint class="bgc-grey">
-        <carusel class="d-flex justify-c-spaceeven">
-            <a href="#" class="grid-ca">Алгебра</a>
-            <a href="#" class="grid-ca">Геометрія</a>
-            <a href="#" class="grid-ca">Чисельні методи</a>
-            <a href="#" class="grid-ca">Бухгалтерський облік</a>
-        </carusel>
-        <main-cont class="bgc-grey d-block"> 
-            <div class="tasks-inout">
-                <div class="head-word-inout">Input</div>
-                <div class="container-input-field margint50">
-                    <div class="input-field">
-                        <div class=""><label for="priklad">Приклад:</label></div>
-                        <div class=""><input type="text" id="priklad" name="fname"><br><br></div>
-                    </div>
-                    <div class="input-field">
-                        <div class=""><label for="start-point">Початкова точка:</label></div>
-                        <div class=""><input type="text" id="spoint" name="spoint"><br><br></div>
-                    </div>
-                    <div class="input-field">
-                        <div class=""><label for="last-point">Кінцева точка:</label></div>
-                        <div class=""><input type="text" id="lpoint" name="lpoint"><br><br></div>
-                    </div>
-                    <div class="input-field">
-                        <div class=""><label for="epsilon">Епсилон:</label></div>
-                        <div class=""><input type="text" id="epsilon" name="epsilon"><br><br></div>
-                    </div>
-                </div>
-            </div>
-                <div class="tasks-inout height371px bgc-grey paddingt30">
-                    <div class="head-word-inout">Output</div>
-                    <div class=""></div>
-                </div>
-        </main-cont>
-    </maint>
+		<nav>
+			<a href="calculator.html">
+				<div class="photo_calc"></div>
+			</a>
+			<a href="#">1</a>
+			<a href="#">2</a>
+			<a href="#">3</a>
+		</nav>
+	</header>
+	<maint class="bgc-grey">
+		<carusel class="d-flex justify-c-spaceeven">
+			<a href="#" class="grid-ca">Алгебра</a>
+			<a href="#" class="grid-ca">Геометрія</a>
+			<a href="#" class="grid-ca">Чисельні методи</a>
+			<a href="#" class="grid-ca">Бухгалтерський облік</a>
+		</carusel>
+		<main-cont class="bgc-grey d-block">
+			<div class="tasks-inout">
+				<div class="head-word-inout">Input</div>
+				<div class="container-input-field margint50">
+					<div class="input-field">
+						<div class=""><label for="priklad">Приклад:</label></div>
+						<div class=""><input type="text" id="priklad" name="fname"><br><br></div>
+					</div>
+					<div class="input-field">
+						<div class=""><label for="start-point">Початкова точка:</label></div>
+						<div class=""><input type="text" id="spoint" name="spoint"><br><br></div>
+					</div>
+					<div class="input-field">
+						<div class=""><label for="last-point">Кінцева точка:</label></div>
+						<div class=""><input type="text" id="lpoint" name="lpoint"><br><br></div>
+					</div>
+					<div class="input-field">
+						<div class=""><label for="epsilon">Епсилон:</label></div>
+						<div class=""><input type="text" id="epsilon" name="epsilon"><br><br></div>
+					</div>
+					<div class="button">
+						<button onclick="getValue()">Туда його</button>
+					</div>
+				</div>
+			</div>
+			<div class="tasks-inout height371px bgc-grey paddingt30">
+				<div class="head-word-inout">Output</div>
+				<div class="">
+					<table id="table_output">
+						<thead>
+							<tr>
+								<th>n</th>
+								<th>-</th>
+								<th>+</th>
+								<th>x=a+b/2</th>
+								<th>f(x)</th>
+								<th>|b - a|</th>
+							</tr>
+						</thead>
+						<tbody>
+							<!-- Сюди будуть додаватися рядки та значення -->
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</main-cont>
+	</maint>
 </body>
-</html> 
+
+</html>
