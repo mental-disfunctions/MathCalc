@@ -105,14 +105,15 @@ nav ul li:hover>ul {
     display: initial;
 }
 
-body {
-    background-color: rgb(156, 155, 155);
-}
-
 main {
     background-color: white;
     width: 100%;
     height: 1500px;
+}
+maint {
+    background-color: white;
+    width: 100%;
+    height: 1000px;
 }
 
 .spange-bob {
@@ -132,9 +133,11 @@ main {
 }
 
 .bgc-grey {
-    background-color: #F5F5F5;
+    background-color: #F6F6F6;
 }
-
+.bgc-blue{
+    background-color: blue;
+}
 .box-shadow {
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 
@@ -146,10 +149,6 @@ main {
 
 .text-a-center {
     text-align: center;
-}
-
-.border {
-    border: solid 3px #176a34;
 }
 
 .cont {
@@ -216,7 +215,9 @@ padding {
 div ul li {
     font-size: 20px;
 }
-
+gap{
+    gap: 30px;
+}
 .photo_geo {
     background-image: url(../image/geo.png);
     background-repeat: no-repeat;
@@ -264,8 +265,53 @@ div ul li {
     grid-template-columns: repeat(4, 1fr);
     column-gap: 2em;
     padding: 0 2em;
+    margin-top: 30px;
 }
+carusel{
+    height: 70px;
+    background-color: #22994c;
+}
+carusel a{
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    margin-top: 30px;
+    transition: .2s;
+}
+carusel a:hover{
+    color: #37B834;
+}
+.tasks-inout{
+    text-align: center;
+}
+.height371px{
+    height: 371px;
+}
+.paddingt30{
+    padding-top: 30px;
+}
+.height200px{
+    height: 200px;
+}
+.head-word-inout{
+    font-size: 32px;
+    font-weight: bold;
+}
+.margint50{
+    margin-top: 50px;
+}
+.margint30{
+    margin-top: 30px;
+}
+.justify-c-center{
+    justify-content: center;
+}
+.justify-c-spaceeven{
+    justify-content: space-evenly;
+}
+.column-gap{
 
+}
 @media (max-width: 917px) and (min-width: 768px) {
     .calculators-container {
         grid-template: repeat(2, 1fr) / repeat(2, 1fr);
