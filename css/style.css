@@ -115,7 +115,6 @@ maint {
     width: 100%;
     height: 1000px;
 }
-
 .spange-bob {
     width: 30%;
 }
@@ -170,7 +169,6 @@ preview {
 }
 
 main-cont {
-    height: 1320px;
     background-color: #F0F6F6;
 }
 
@@ -275,8 +273,15 @@ carusel a{
     font-size: 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: white;
-    margin-top: 30px;
+    margin-top: px;
     transition: .2s;
+    width: 10%;
+    text-align: center;
+    align-self: center;
+    padding: 1.2em 0;
+}
+carusel a:nth-child(2){
+    background-color: #1e8c45   ;
 }
 carusel a:hover{
     color: #37B834;
@@ -318,6 +323,13 @@ carusel a:hover{
 }
 .input-field {
 
+}
+.list{
+    background-color: black;
+    height: 100px;
+}
+.padding15{
+    padding: 150px 0;
 }
 @media (max-width: 917px) and (min-width: 768px) {
     .calculators-container{
