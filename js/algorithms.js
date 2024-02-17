@@ -2,6 +2,11 @@ function halfDivisionMethod(func = "Math.pow(x, 2) - Math.exp(-x)", a = 0.5, b =
 	const resultTable = new Object();
 	const n = Math.ceil(Math.log2((b - a) / e));
 	givedFunction = Function("x", "return " + func + ";");
+	if(givedFunction(a) >= 0 && givedFunction(b) < 0){
+        	let c = a;
+        	a = b;
+        	b = c;
+	}
 	for (let i = 1; i < n + 1; i++) {
 		const x = (a + b) / 2;
 		resultTable[i] = {
