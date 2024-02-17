@@ -331,6 +331,10 @@ carusel a:hover{
 .padding15{
     padding: 150px 0;
 }
+main-cont{
+    display: block;
+    padding: 0 10%;
+}
 @media (max-width: 917px) and (min-width: 768px) {
     .calculators-container{
         grid-template: repeat(2, 1fr) / repeat(2, 1fr);
