@@ -312,16 +312,30 @@ carusel a:hover{
 .column-gap{
 
 }
+.container-input-field {
+    display: grid;
+    grid-template: 1fr / repeat(4, 1fr);
+}
+.input-field {
+
+}
 @media (max-width: 917px) and (min-width: 768px) {
-    .calculators-container {
+    .calculators-container{
         grid-template: repeat(2, 1fr) / repeat(2, 1fr);
         row-gap: 2em;
     }
 }
 
 @media (max-width: 768px) {
-    .calculators-container {
+    .calculators-container,
+    .container-input-field{
         row-gap: 2em;
         grid-template: repeat(4, 1fr) / 1fr;
+    }
+}
+
+@media (max-width:917px) and (min-width: 425px) {
+    .container-input-field{
+        grid-template: repeat(2, 1fr) / repeat(2, 1fr);
     }
 }
