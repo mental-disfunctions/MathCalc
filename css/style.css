@@ -246,7 +246,19 @@ div ul li {
     margin-left: auto;
     margin-right: auto;
 }
-
+.photo_calc{
+    background-image: url(../image/calculator1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 30px;
+    width: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: .2s;
+}
+.photo_calc:hover{
+    background-image: url(../image/calculator2.png);
+}
 .calculators-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
