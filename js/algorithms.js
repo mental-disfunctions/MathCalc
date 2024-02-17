@@ -1,4 +1,4 @@
-function halfDivisionMethod(func = "Math.pow(x, 3) - x - 1", a = 1, b = 2, e = 0.1) {
+function halfDivisionMethod(func = "Math.pow(x, 2) - Math.exp(-x)", a = 0.5, b = 1, e = 0.001) {
     const resultTable = new Object();
     const n = Math.ceil(Math.log2((b - a) / e));
     givedFunction = Function("x", "return " + func + ";");
@@ -20,7 +20,7 @@ function halfDivisionMethod(func = "Math.pow(x, 3) - x - 1", a = 1, b = 2, e = 0
     }
     return resultTable;
 }
-
-for (let i = 1; i < Object.keys(halfDivisionMethod()).length + 1; i++) {
-    console.log(halfDivisionMethod()[i]);
-}
+// Test
+// for (let i = 1; i < Object.keys(halfDivisionMethod()).length + 1; i++) {
+//     console.log(halfDivisionMethod()[i]);
+// }
