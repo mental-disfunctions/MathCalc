@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Карусель фото</title>
+<style>
+.carousel {
+  width: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-image {
+  width: 500px;
+  height: 500px;
+}
+
+.btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+</style>
+</head>
+<body>
+
+<div class="carousel">
+  <div class="carousel-images">
+    <img class="carousel-image" src="../image/image1.jpg" alt="Image 1">
+    <img class="carousel-image" src="../image/image2.png" alt="Image 2">
+    <img class="carousel-image" src="https://via.placeholder.com/300x200?text=Image+3" alt="Image 3">
+  </div>
+  <button class="btn prev" onclick="prevSlide()">←</button>
+  <button class="btn next" onclick="nextSlide()">→</button>
+</div>
+
+<script>
+let currentIndex = 0;
+const slides = document.querySelectorAll('.carousel-image');
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    if (i === index) {
+      slide.style.display = 'block';
+    } else {
+      slide.style.display = 'none';
+    }
+  });
+}
+
+function prevSlide() {
+  currentIndex = (currentIndex === 0) ? slides.length - 1 : currentIndex - 1;
+  showSlide(currentIndex);
+}
+
+function nextSlide() {
+  currentIndex = (currentIndex === slides.length - 1) ? 0 : currentIndex + 1;
+  showSlide(currentIndex);
+}
+
+showSlide(currentIndex);
+</script>
+
+</body>
+</html>

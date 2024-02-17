@@ -200,7 +200,7 @@ padding {
 
 .grid-item {
     padding: 10px;
-    font-size: 30px;
+    font-size: 1.4em;
     text-align: center;
     height: 300px;
     background-color: white;
@@ -209,6 +209,7 @@ padding {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 
 div ul li {
@@ -246,6 +247,15 @@ gap{
     margin-left: auto;
     margin-right: auto;
 }
+.photo_accounting {
+    background-image: url(../image/accounting.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100px;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
 .photo_calc{
     background-image: url(../image/calculator1.png);
     background-repeat: no-repeat;
@@ -255,6 +265,19 @@ gap{
     margin-left: auto;
     margin-right: auto;
     transition: .2s;
+}
+.photo_images{
+    background-image: url(../image/images1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 30px;
+    width: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: .2s;
+}
+.photo_images:hover{
+    background-image: url(../image/images2.png);
 }
 .photo_calc:hover{
     background-image: url(../image/calculator2.png);
@@ -334,6 +357,7 @@ carusel a:hover{
     display: grid;
     grid-template: repeat(2,1fr) / repeat(3,1fr);
     text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 .list-item{
     display: block;
@@ -371,3 +395,15 @@ main-cont{
         grid-template: repeat(2, 1fr) / repeat(2, 1fr);
     }
 }
+
+.marquee {
+    white-space: nowrap;
+    overflow: hidden;
+    position: absolute;
+    animation: marquee 20s linear infinite;
+  }
+  
+  @keyframes marquee {
+    0% { left: 100%; }
+    100% { left: -100%; }
+  }
