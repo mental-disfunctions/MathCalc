@@ -9,28 +9,64 @@
 	<script src="../js/algorithms.js"></script>
 	<script src="../js/script.js"></script>
 	<title>Метод половинного поділу</title>
+	<style>
+		@media(max-width: 560px){
+    carusel{
+        background: #22994c;
+    }
+    .list{
+        box-shadow:  rgba(0, 0, 0, 0.27) 0px 6px 6px;
+    }
+    carusel div a{
+        display: none;
+    }
+    main-cont{
+        padding: 0;
+    }
+    }
+	</style>
 </head>
 
 <body>
-	<header>
+	<header class="header">
 
-		<a href="#" class="logo"></a>
+        <a href="#" class="logo"></a>
 
-		<nav>
-			<a href="calculator.html">
-				<div class="photo_calc"></div>
-			</a>
-			<a href="#">1</a>
-			<a href="#">2</a>
-			<a href="#">3</a>
-		</nav>
-	</header>
+        <nav>
+            <a href="calculator.html"><div class="photo_calc"></div></a>
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="carusel.html"><div class="photo_images"></div></a>
+        </nav>
+        <navtele>
+            <a href="calculator.html"><div class="photo_calc"></div></a>
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <div class="menu-document">
+				<bl>Math.E</bl> - число Ейлера <br>
+				<bl>Math.LN2</bl> - Натуральний логарифм з 2 <br>
+				<bl>Math.LN10</bl> - Натуральний логарифм з 10 <br>
+				<bl>Math.LOG2E</bl> - Двійковий логарифм з E <br>
+				<bl>Math.LOG10E</bl> - Десятковий логарифм з E <br>
+				<bl>Math.PI</bl> - число Пі <br>
+				<bl>Math.SQRT1 2</bl> - Квадратний корінь з 1/2 <br>
+				<bl>Math.SQRT2</bl> - Квадратний корінь з 2 <br>
+				<bl>Math.cos(x)</bl> - косинус (можна замінити на тангенс, синус) <br>
+				<bl>Math.abs(x)</bl> - повертає абсолютне значення числа <br>
+				<bl>Math.pow(a, n)</bl> - повертає a в n-й степені <br>
+				<bl>Math.round(x)</bl> - округлює до ближ. цілого
+            </div>
+            <button class="header__burger-btn" id="burger">
+                <div class="photo_docs"></div>
+            </button>
+        </navtele>
+    </header>
 	<maint class="bgc-grey">
 		<carusel class="d-flex justify-c-spaceeven">
-			<a href="#" class="grid-ca">Алгебра</a>
-			<a href="#" class="grid-ca">Геометрія</a>
-			<a href="#" class="grid-ca">Чисельні методи</a>
-			<a href="#" class="grid-ca">Бухгалтерський облік</a>
+			<a href="#">Алгебра</a>
+			<a href="#">Геометрія</a>
+			<a href="chismeth-page.html">Чисельні методи</a>
+			<a href="accounting-page.html">Бухгалтерський облік</a>
 		</carusel>
 		<main-cont class="bgc-grey d-block">
 			<div class="tasks-inout">
@@ -52,15 +88,15 @@
 						<div class=""><label for="epsilon">Епсилон:</label></div>
 						<div class=""><input type="text" id="epsilon" name="epsilon"><br><br></div>
 					</div>
-					<div class="button">
-						<button onclick="getValue()">Туда його</button>
-					</div>
+				</div>
+				<div class="button">
+					<button onclick="getValue()">Туда його</button>
 				</div>
 			</div>
 			<div class="tasks-inout height371px bgc-grey paddingt30">
 				<div class="head-word-inout">Output</div>
-				<div class="">
-					<table id="table_output">
+				<div class="d-flex justify-c-center">
+					<table class="" id="table_output">
 						<thead>
 							<tr>
 								<th>n</th>

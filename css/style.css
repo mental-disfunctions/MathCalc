@@ -67,6 +67,7 @@ header nav {
 }
 .header.open .menu{
     transform: translateY(100%);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 .header__burger-btn span:nth-child(3){
     transform: translateY(10px);
@@ -83,6 +84,10 @@ header nav {
 .header.open .menu{
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
+.header.open .menu-document{
+    transform: translateY(100%);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
 .menu{
     position: absolute;
     right: 0;
@@ -94,6 +99,24 @@ header nav {
     top: -275px;
     transition: transform .5s;
     padding-top: 70px;
+}
+bl{
+    color: black;
+    font-weight: bold;
+}
+.menu-document{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #22994c;
+    height: 420px;
+    width: 300px;
+    right: 0px;
+    top: -420px;
+    transition: transform .5s;
+    padding-top: 50px;
+    color: white;
+    padding-left: 10px;
 }
 .menu-things{
     height: 50px;
@@ -125,9 +148,6 @@ navtele {
     display: none;
     gap: 30px;
 }
-
-
-
 main {
     background-color: white;
     width: 100%;
@@ -210,7 +230,6 @@ padding {
 .margint {
     margin-top: 40px;
 }
-
 .grid-item:hover {
     transition: .2s;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
@@ -251,7 +270,15 @@ gap{
     margin-left: auto;
     margin-right: auto;
 }
-
+.photo_docs {
+    background-image: url(../image/docs1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 40px;
+    width: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
 .photo_algeb {
     background-image: url(../image/math.png);
     background-repeat: no-repeat;
@@ -321,21 +348,6 @@ carusel a{
     font-size: 1.22em;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: white;
-}
-.non-active{
-    transition: .2s;
-    width: 13%;
-    text-align: center;
-    align-self: center;
-    background-color: #22994c;
-}
-.active{
-    transition: .2s;
-    width: 15%;
-    text-align: center;
-    align-self: center;
-    background-color: #1e8c45;
-    height: 44px;
     padding-top: 10px;
 }
 .tasks-inout{
@@ -402,13 +414,27 @@ main-cont{
     display: block;
     padding: 0 10%;
 }
+table, th, td {
+    border: solid 1px;
+    margin-top: 10px;
+}
+
 @media (max-width: 917px) and (min-width: 768px) {
     .calculators-container{
         grid-template: repeat(2, 1fr) / repeat(2, 1fr);
         row-gap: 2em;
     }
 }
-
+main-cont div div button{
+    background-color: #1e8c45;
+    border: solid 1px;
+    height: 25px;
+    width: 200px;
+    margin-top: 14px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
 @media (max-width: 768px) {
     .calculators-container,
     .container-input-field{
@@ -442,6 +468,10 @@ main-cont{
   
 /*Mobile*/
 @media(max-width: 560px){
+    table, th, td {
+        border: solid 1px;
+        font-size: 8px;
+    }
     navtele{
         display: flex;
     }
@@ -463,5 +493,10 @@ main-cont{
     }
     main-cont{
         padding: 0;
+    }
+}
+@media(min-width: 560px) and (max-width: 757px){
+    table, th, td {
+        font-size: 12px;
     }
 }
