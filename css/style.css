@@ -201,7 +201,6 @@ main-cont {
     transition: .2s;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
-
 .grid-item {
     padding: 10px;
     font-size: 1.4em;
@@ -216,7 +215,41 @@ main-cont {
     transition: .5s;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-
+.justify-c-right{
+    justify-content: right;
+}
+.manana{
+    position: absolute;
+    right: 30px;
+    background-image: url(../image/info1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 40px;
+    width: 40px;
+    z-index: 2;
+}
+.menu-document-pc{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #22994c;
+    right: 0px;
+    transition: transform .5s;
+    opacity: 0;
+    color: white;
+    padding: 10px;
+    height: 250px;
+    top: -250px;
+}
+.header.open .menu-document-pc{
+    opacity: 1;
+    transform: translateY(100%);
+    transition: .5s;
+}
+.manana:hover{
+    background-image: url(../image/info2.png);
+    transition: .2s;
+}
 gap{
     gap: 30px;
 }
@@ -354,6 +387,9 @@ div ul li{
     height: 500px;
     width: 100%;
 }
+main-conttele{
+    display: none;
+}
 @media (max-width: 917px) and (min-width: 768px) {
     .calculators-container{
         grid-template: repeat(2, 1fr) / repeat(2, 1fr);
@@ -427,7 +463,17 @@ main-cont div div button{
         padding: 0;
     }
     carusel a{
-        display: none;
         font-size: 1em;
+    }
+    .manana, .menu-document-pc{
+        display: none;
+    }
+}
+@media(max-width: 800px){
+    main-conttele{
+        display: block;
+        padding-left: 15%;
+        padding-right: 15%;
+        font-size: 20px;
     }
 }
