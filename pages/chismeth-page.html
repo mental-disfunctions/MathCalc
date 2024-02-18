@@ -5,26 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
     <script src="../js/main.js"></script>
-    <title>Calculators</title>
+    <title>Чисельні методи</title>
+    <style>
+    </style>
 </head>
 <body>
-    <header>
+    <header class="header">
 
         <a href="#" class="logo"></a>
 
         <nav>
-            <a href="#"><div class="photo_calc"></div></a>
+            <a href="calculator.html"><div class="photo_calc"></div></a>
             <a href="#">1</a>
             <a href="#">2</a>
             <a href="carusel.html"><div class="photo_images"></div></a>
         </nav>
+        <navtele>
+            <a href="calculator.html"><div class="photo_calc"></div></a>
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <div class="menu">
+                    <a href="#"><div class="menu-things">Алгебра</div></a>
+                    <a href="#"><div class="menu-things">Геометрія</div></a>
+                    <a href="#"><div class="menu-things"><a href="chismeth-page.html">Чисельні методи</div></a>
+                    <a href="#"><div class="menu-things"><a href="accounting-page.html">Економіка</div></a>
+            </div>
+            <button class="header__burger-btn" id="burger">
+                <span></span><span></span><span></span>
+            </button>
+        </navtele>
     </header>
     <maint class="bgc-grey">
         <carusel class="d-flex justify-c-spaceeven">
-            <a href="#" class="grid-ca">Алгебра</a>
-            <a href="#" class="grid-ca">Геометрія</a>
-            <a href="#" class="grid-ca">Чисельні методи</a>
-            <a href="#" class="grid-ca">Бухгалтерський облік</a>
+            <div class="non-active"><a href="#">Алгебра</a></div>
+            <div class="non-active"><a href="#">Геометрія</a></div>
+            <div class="active"><a href="chismeth-page.html">Чисельні методи</a></div>
+            <div class="non-active"><a href="accounting-page.html">Економіка</a></div>
         </carusel>
         <main-cont>
             <div class="list">

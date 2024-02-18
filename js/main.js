@@ -11,13 +11,8 @@ function openPageAccounting(){
     window.location.href = "accounting-page.html";
 }
 
-// Кількість разів, яку потрібно повторити слово
-var repeatCount = 20;
-var marqueeText = 'Кані Вест ';
-
-// Створюємо рядок з багаторазовим текстом
-var repeatedText = marqueeText.repeat(repeatCount);
-
-// Додаємо багаторазовий текст до контейнера
-var marqueeContainer = document.getElementById('marqueeContainer');
-marqueeContainer.textContent = repeatedText;
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('burger').addEventListener('click', function() {
+        document.querySelector('header').classList.toggle('open')
+    })
+})
