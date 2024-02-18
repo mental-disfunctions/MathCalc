@@ -18,6 +18,8 @@ function getValue() {
 	// Отримуємо доступ до таблиці
 	var table = document.getElementById("table_output").getElementsByTagName('tbody')[0];
 
+	//Очищуємо таблицю
+	table.innerHTML = "";
 
 	Object.keys(result).forEach(function (key) {
 		var row = table.insertRow();
