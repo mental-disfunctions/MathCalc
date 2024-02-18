@@ -220,6 +220,10 @@ main-cont {
 gap{
     gap: 30px;
 }
+.padding-lr{
+    padding-left: 20%;
+    padding-right: 20%;
+}
 .photo_geo, .photo_algeb, .photo_chismeth, .photo_accounting{
     background-repeat: no-repeat;
     background-size: contain;
@@ -345,6 +349,10 @@ div ul li{
 }
 .d-block{
     display: block;
+}
+.height500px{
+    height: 500px;
+    width: 100%;
 }
 @media (max-width: 917px) and (min-width: 768px) {
     .calculators-container{
