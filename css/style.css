@@ -5,6 +5,7 @@
     font-family: sans-serif;
     list-style: none;
     text-decoration: none;
+    font-weight: bold;
 }
 
 header {
@@ -123,6 +124,7 @@ bl{
     align-self: center;
     text-align: center;
     padding-top: 10px;
+    font-weight: bold;
 }
 .menu a{
     color: white;
