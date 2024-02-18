@@ -27,6 +27,7 @@ function getValue() {
 		Object.keys(obj).forEach(function (prop) {
 			var cell = row.insertCell();
 			cell.textContent = obj[prop];
+			cell.setAttribute("data-title", prop);
 		});
 	});
 }
