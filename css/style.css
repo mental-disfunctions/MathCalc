@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif  ;
     list-style: none;
     text-decoration: none;
     font-weight: bold;
@@ -18,8 +18,6 @@ header {
     align-items: center;
     padding: 0 2%;
     gap: 10%;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     z-index: 99;
 }
 
@@ -112,10 +110,10 @@ bl{
     right: 0;
     top: 0;
     background-color: #22994c;
-    height: 440px;
+    height: 320px;
     width: 300px;
     right: 0px;
-    top: -440px;
+    top: -320px;
     transition: transform .5s;
     padding-top: 50px;
     color: white;
@@ -151,6 +149,9 @@ navtele {
     font-size: 16px;
     display: none;
     gap: 30px;
+}
+navtele div a div{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif  ;
 }
 main {
     background-color: white;
@@ -384,8 +385,8 @@ carusel a{
 .justify-c-spaceeven{
     justify-content: space-evenly;
 }
-.column-gap{
-
+div ul li{
+    font-size: 15px;
 }
 .container-input-field {
     display: grid;
