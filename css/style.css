@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif  ;
+    font-family:'arial'  ;
     list-style: none;
     text-decoration: none;
     font-weight: bold;
@@ -110,10 +110,10 @@ bl{
     right: 0;
     top: 0;
     background-color: #22994c;
-    height: 400px;
+    height: 450px;
     width: 300px;
     right: 0px;
-    top: -400px;
+    top: -450px;
     transition: transform .5s;
     padding-top: 50px;
     color: white;
