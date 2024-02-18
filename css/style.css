@@ -36,12 +36,11 @@ header .logo {
 .justify-c-center {
     justify-content: center;
 }
-.header{
-    font-size: 5px;
-}
 header nav {
     gap: 30px;
 }
+
+/* Burger Menu */
 .header__burger-btn{
     width: 40px;
     height: 40px;
@@ -89,16 +88,18 @@ header nav {
     transform: translateY(100%);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
-.menu{
+.menu, .menu-document{
     position: absolute;
     right: 0;
     top: 0;
     background-color: #22994c;
+    right: 0px;
+    transition: transform .5s;
+}
+.menu{
     height: 275px;
     width: 170px;
-    right: 0px;
     top: -275px;
-    transition: transform .5s;
     padding-top: 70px;
 }
 bl{
@@ -106,15 +107,9 @@ bl{
     font-weight: bold;
 }
 .menu-document{
-    position: absolute;
-    right: 0;
-    top: 0;
-    background-color: #22994c;
     height: 450px;
     width: 300px;
-    right: 0px;
     top: -450px;
-    transition: transform .5s;
     padding-top: 50px;
     color: white;
     padding-left: 10px;
@@ -131,10 +126,6 @@ bl{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 20px;
     width: 170px;
-}
-yellow {
-    color: blue;
-    font-size: 25px;
 }
 
 header .logo:hover {
@@ -163,13 +154,6 @@ maint {
     width: 100%;
     height: 1000px;
 }
-.spange-bob {
-    width: 30%;
-}
-
-.row {
-    width: 100%;
-}
 
 .d-flex {
     display: flex;
@@ -190,25 +174,8 @@ maint {
 
 }
 
-.index {
-    z-index: 99;
-}
-
 .text-a-center {
     text-align: center;
-}
-
-.cont {
-    width: 100%;
-    height: 70px;
-}
-
-.bo-left-none {
-    border-left: none;
-}
-
-.bo-top-none {
-    border-top: none;
 }
 
 preview {
@@ -219,6 +186,8 @@ preview {
 main-cont {
     background-color: #F0F6F6;
     height: 600px;
+    display: block;
+    padding: 0 10%;
 }
 
 .font {
@@ -228,21 +197,9 @@ main-cont {
     font-size: 25px;
 }
 
-padding {
-    padding: 2%;
-}
-
-.margint {
-    margin-top: 40px;
-}
 .grid-item:hover {
     transition: .2s;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-}
-
-.padding-lr {
-    padding-left: 10%;
-    padding-right: 10%;
 }
 
 .grid-item {
@@ -260,14 +217,10 @@ padding {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-div ul li {
-    font-size: 20px;
-}
 gap{
     gap: 30px;
 }
-.photo_geo {
-    background-image: url(../image/geo.png);
+.photo_geo, .photo_algeb, .photo_chismeth, .photo_accounting{
     background-repeat: no-repeat;
     background-size: contain;
     height: 100px;
@@ -284,53 +237,39 @@ gap{
     margin-left: auto;
     margin-right: auto;
 }
+.photo_geo {
+    background-image: url(../image/geo.png);
+
+}
+
 .photo_algeb {
     background-image: url(../image/math.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 100px;
-    width: 100px;
-    margin-left: auto;
-    margin-right: auto;
+
 }
 
 .photo_chismeth {
     background-image: url(../image/chisel.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 100px;
-    width: 100px;
-    margin-left: auto;
-    margin-right: auto;
+
 }
+
 .photo_accounting {
     background-image: url(../image/accounting.png);
+
+}
+.photo_calc, .photo_images{
     background-repeat: no-repeat;
     background-size: contain;
-    height: 100px;
-    width: 100px;
+    height: 30px;
+    width: 30px;
     margin-left: auto;
     margin-right: auto;
+    transition: .2s;
 }
 .photo_calc{
     background-image: url(../image/calculator1.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 30px;
-    width: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    transition: .2s;
 }
 .photo_images{
     background-image: url(../image/images1.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 30px;
-    width: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    transition: .2s;
 }
 .photo_images:hover{
     background-image: url(../image/images2.png);
@@ -366,9 +305,6 @@ carusel a{
 .paddingt30{
     padding-top: 30px;
 }
-.height200px{
-    height: 200px;
-}
 .head-word-inout{
     font-size: 32px;
     font-weight: bold;
@@ -378,9 +314,6 @@ carusel a{
 }
 .margint30{
     margin-top: 30px;
-}
-.justify-c-center{
-    justify-content: center;
 }
 .justify-c-spaceeven{
     justify-content: space-evenly;
@@ -413,14 +346,6 @@ div ul li{
 .d-block{
     display: block;
 }
-.padding15{
-    padding: 150px 0;
-}
-main-cont{
-    display: block;
-    padding: 0 10%;
-}
-
 @media (max-width: 917px) and (min-width: 768px) {
     .calculators-container{
         grid-template: repeat(2, 1fr) / repeat(2, 1fr);
@@ -478,6 +403,7 @@ main-cont div div button{
     }
     carusel{
         background: white;
+        display: none;
     }
     .active, .non-active{
         background: none;
@@ -493,6 +419,7 @@ main-cont div div button{
         padding: 0;
     }
     carusel a{
+        display: none;
         font-size: 1em;
     }
 }
