@@ -494,6 +494,9 @@ main-cont div div button{
     main-cont{
         padding: 0;
     }
+    carusel a{
+        font-size: 1em;
+    }
 }
 @media(min-width: 560px) and (max-width: 757px){
     table, th, td {
