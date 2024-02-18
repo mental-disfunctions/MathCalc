@@ -16,3 +16,8 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('header').classList.toggle('open')
     })
 })
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('infocalctask1').addEventListener('click', function() {
+        document.querySelector('header').classList.toggle('open')
+    })
+})
