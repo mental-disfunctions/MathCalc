@@ -349,6 +349,7 @@ carusel a{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: white;
     padding-top: 10px;
+    font-weight: bold;
 }
 .tasks-inout{
     text-align: center;
