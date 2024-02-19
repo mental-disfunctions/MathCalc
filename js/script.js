@@ -6,9 +6,9 @@ function getValue() {
 	var last_point = parseFloat(document.getElementById("lpoint").value);
 	var epsilon = parseFloat(document.getElementById("epsilon").value);
 
-
+	our_function_from_klava = result_from_klava();
 	// Рахуємо результат
-	var result = halfDivisionMethod(our_function, first_point, last_point, epsilon);
+	var result = halfDivisionMethod(our_function_from_klava, first_point, last_point, epsilon);
 
 
 	// Відправляємо результат користувачу
