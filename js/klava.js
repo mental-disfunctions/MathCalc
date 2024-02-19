@@ -70,3 +70,7 @@ function replace(text) {
 
 	return outputString;
 }
+
+function backspc() {
+	priklad.value = priklad.value.substr(0, priklad.value.length - 1);
+}
