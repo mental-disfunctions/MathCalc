@@ -1,8 +1,8 @@
 function halfDivisionMethod(func = "Math.pow(x, 2) - Math.exp(-x)", a = 0.5, b = 1, e = 0.001) {
 	const resultTable = new Object();
 	const n = Math.ceil(Math.log2((b - a) / e));
-	givedFunction = Function("x", "return " + func + ";");
-	if(givedFunction(a) >= 0 && givedFunction(b) < 0){
+	takenFunction = Function("x", "return " + func + ";");
+	if(takenFunction(a) >= 0 && takenFunction(b) < 0){
         	let c = a;
         	a = b;
         	b = c;
@@ -14,10 +14,10 @@ function halfDivisionMethod(func = "Math.pow(x, 2) - Math.exp(-x)", a = 0.5, b =
 			"-": a,
 			"+": b,
 			"x=a+b/2": x,
-			"f(x)": givedFunction(x),
+			"f(x)": takenFunction(x),
 			"|b-a|": Math.abs(b - a)
 		};
-		if (Math.sign(givedFunction(x) < 0)) {
+		if (Math.sign(takenFunction(x) < 0)) {
 			a = x;
 		} else {
 			b = x;
