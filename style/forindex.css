@@ -10,7 +10,7 @@
 body{
     background-color: #F6F6F6;
 }
-.photo_calc, .photo_images{
+.photo_calc{
     height: 30px;
     width: 30px;
     margin-left: auto;
@@ -20,7 +20,10 @@ body{
 .photo_calc{
     background-image: url(../image/calculator1.png);
 }
-.photo_calc, .photo_images{
+.photo_calc:hover{
+    background-image: url(../image/calculator2.png);
+}
+.photo_calc{
     background-size: contain;
     background-repeat: no-repeat;
 }
