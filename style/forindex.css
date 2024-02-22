@@ -43,9 +43,11 @@ div.cont div{
     height: 250px;
     transition: transform 0.3s ease
 }
+/* TEST 
 .cont-mother img:hover {
-    transform: scale(1.3); 
+    transform: scale(2) translateY(60px); 
 }
+*/
 .text{
     padding: 2%;
 }
