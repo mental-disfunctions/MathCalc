@@ -10,7 +10,6 @@
 body{
     background-color: #F6F6F6;
 }
-
 .photo_calc, .photo_images{
     height: 30px;
     width: 30px;
@@ -21,22 +20,34 @@ body{
 .photo_calc{
     background-image: url(../image/calculator1.png);
 }
-
 .photo_calc, .photo_images{
     background-size: contain;
     background-repeat: no-repeat;
 }
-.cont{
-    margin-top: 20px;
+.cont{  
     padding: 0 10%;
-    padding-bottom: 10%;
-    height: 500px;
+    width: 100%;
+}
+div.cont div{
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .cont-mother{
-    display: ;
+    display: flex;
+    justify-content: center;
+    column-gap: 30px;
+    row-gap: 15px;
+    position: relative;
 }
-div.cont-mother img{
-    height: 200px;
+.cont-mother img{
+    height: 250px;
+    transition: transform 0.3s ease
+}
+.cont-mother img:hover {
+    transform: scale(1.3); 
+}
+.text{
+    padding: 2%;
 }
 /*PC*/
 @media (min-width: 993px) {
@@ -52,6 +63,9 @@ div.cont-mother img{
         display: none;
     }
     div.cont-mother img{
-        height: 200px;
+        height: 400px;
+    }
+    .cont-mother{
+        display: grid;
     }
 }
