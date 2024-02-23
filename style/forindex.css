@@ -30,6 +30,7 @@ body{
 .cont{  
     padding: 0 10%;
     width: 100%;
+    height: 700px;
 }
 div.cont div{
     background-color: white;
@@ -38,7 +39,7 @@ div.cont div{
 .cont-mother{
     display: flex;
     justify-content: center;
-    column-gap: 30px;
+    column-gap: 20px;
     row-gap: 15px;
     position: relative;
 }
@@ -64,13 +65,13 @@ div.cont div{
 }
 /*Mobile*/
 @media (max-width: 769px) {
-    footer{
-        display: none;
-    }
     div.cont-mother img{
         height: 400px;
     }
     .cont-mother{
         display: grid;
+    }
+    .cont{
+        padding: 0%;
     }
 }
