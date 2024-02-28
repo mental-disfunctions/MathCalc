@@ -47,7 +47,7 @@ div.cont div{
     height: 250px;
     transition: transform 0.3s ease
 }
-/* TEST 
+/*                                                                                                                                                                                                                               TEST 
 .cont-mother img:hover {
     transform: scale(2) translateY(60px); 
 }
