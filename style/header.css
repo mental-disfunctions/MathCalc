@@ -9,6 +9,7 @@ header {
     z-index: 99;
     display: flex;
     justify-content: center ;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 header nav ul{
     display: flex;
