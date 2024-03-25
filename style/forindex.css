@@ -28,32 +28,91 @@ body{
     background-repeat: no-repeat;
 }
 .cont{  
-    padding: 0 10%;
+    padding: 0% 10%;
     width: 100%;
-    height: 700px;
+    flex-grow: 1; 
 }
-div.cont div{
-    background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-.cont-mother{
+.just-c-center{
     display: flex;
     justify-content: center;
-    column-gap: 20px;
-    row-gap: 15px;
-    position: relative;
 }
-.cont-mother img{
-    height: 250px;
-    transition: transform 0.3s ease
+
+.calculators-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 2em;
+    margin-top: 30px;
 }
-/*                                                                                                                                                                                                                               TEST 
-.cont-mother img:hover {
-    transform: scale(2) translateY(60px); 
+.grid-item:hover {
+    transition: .2s;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
-*/
-.text{
-    padding: 2%;
+.grid-item {
+    padding: 10px;
+    font-size: 1.4em;
+    text-align: center;
+    height: 300px;
+    background-color: white;
+    border-radius: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.photo_geo, .photo_algeb, .photo_chismeth, .photo_accounting{
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100px;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.photo_docs {
+    background-image: url(../image/docs1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 40px;
+    width: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.photo_geo {
+    background-image: url(../image/geo.png);
+
+}
+
+.photo_algeb {
+    background-image: url(../image/math.png);
+
+}
+
+.photo_chismeth {
+    background-image: url(../image/chisel.png);
+
+}
+
+.photo_accounting {
+    background-image: url(../image/accounting.png);
+
+}
+.text-a-center {
+    text-align: center;
+}
+.font {
+    color: black;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+}
+
+.margint30{
+    margin-top: 30px;
+}
+div ul li{
+    font-size: 15px;
 }
 /*PC*/
 @media (min-width: 993px) {
@@ -64,14 +123,30 @@ div.cont div{
 
 }
 /*Mobile*/
-@media (max-width: 769px) {
-    div.cont-mother img{
-        height: 400px;
+
+@media (max-width: 612px) {
+    .calculators-container{
+        row-gap: 2em;
+        grid-template: repeat(4, 1fr) / 1fr;
+        justify-content: center;
     }
-    .cont-mother{
-        display: grid;
+}
+@media (max-width: 1100px) and (min-width: 612px) {
+    .calculators-container{
+        grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+        row-gap: 2em;
     }
-    .cont{
-        padding: 0%;
-    }
+}
+
+.blur{
+    filter: blur(5px);
+}
+
+.notwork{
+    position: absolute;
+    background-image: url(../image/NOTWORKING.png);
+    height: 250px;
+    width: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
