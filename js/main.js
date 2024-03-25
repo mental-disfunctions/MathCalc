@@ -1,5 +1,5 @@
 function openPageChisel(){
-    window.location.href = "chismeth-page.html";
+    window.location.href = "pages/chismeth-page.html";
 }
 function openPageAlgeb(){
     window.location.href = "algeb-page.html";
