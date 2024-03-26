@@ -1,5 +1,5 @@
 function openPageChisel(){
-    window.location.href = "chismeth-page.html";
+    window.location.href = "pages/chismeth-page.html";
 }
 function openPageAlgeb(){
     window.location.href = "algeb-page.html";
@@ -16,8 +16,12 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('header').classList.toggle('open')
     })
 })
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('infocalctask1').addEventListener('click', function() {
-        document.querySelector('header').classList.toggle('open')
-    })
-})
+
+$(function(){
+    var txt = $(".list__pawn").text().trim();
+    if(txt.length > 10){
+       $(".cuttedText").text( txt.substring(0,10) + '...');
+    }
+  });
+
+  //????
