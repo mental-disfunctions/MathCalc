@@ -1,0 +1,22 @@
+{
+  "name": "mathcalc",
+  "version": "1.0.0",
+  "description": "- [Solve the system of linear equations using the matrix method](https://ua.onlinemschool.com/math/assistance/equation/matr/)\r - [Solve the system of linear equations using the Gauss method](https://ua.onlinemschool.com/math/assistance/equation/gaus/)\r - [Solve the system of linear equations using the Cramer method](https://ua.onlinemschool.com/math/assistance/equation/kramer/)",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mental-disfunctions/MathCalc.git"
+  },
+  "author": "Vexer79 and MentalDisfunctions",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mental-disfunctions/MathCalc/issues"
+  },
+  "homepage": "https://github.com/mental-disfunctions/MathCalc#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
