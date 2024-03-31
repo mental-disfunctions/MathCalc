@@ -12,16 +12,18 @@ function openPageAccounting(){
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('burger').addEventListener('click', function() {
-        document.querySelector('header').classList.toggle('open')
-    })
+    // document.getElementById('burger').addEventListener('click', function() {
+    //     document.querySelector('header').classList.toggle('open')
+    // })
+    var animation = bodymovin.loadAnimation({
+        container: document.getElementById('anim'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: 'js/gf.json' // lottie file path
+      })
 })
 
-$(function(){
-    var txt = $(".list__pawn").text().trim();
-    if(txt.length > 10){
-       $(".cuttedText").text( txt.substring(0,10) + '...');
-    }
-  });
-
   //????
+
+ 

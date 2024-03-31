@@ -14,7 +14,7 @@ header {
 header nav ul{
     display: flex;
 }
-.head__logo{
+/* .head__logo{
     background-image: url(../image/logo.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -23,8 +23,8 @@ header nav ul{
     cursor: default;
     user-select: none;
     margin-top: 10px;
-}
-header .logo:hover {
-    transform: scale(1.2);
-    transition: .2s;
-}
+} */
+/* header .head__logo:hover {
+    background-image:  url(../image/trap-shit.gif);
+    background-repeat: no;
+} */
