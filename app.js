@@ -6,7 +6,10 @@ const port = process.env.PORT || 3001;
 
 const userRoutes = require("./routes/user");
 
+app.use(express.static(path.join(__dirname, "public")));
+
 app.use(userRoutes);
+
 
 const server = app.listen(port, () => console.log(`App listening on port ${port}!`));
 
