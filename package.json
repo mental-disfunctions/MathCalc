@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/mental-disfunctions/MathCalc#readme",
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "mathjs": "^12.4.1"
   },
   "engines": {
     "node": "20.12.0"
