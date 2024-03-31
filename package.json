@@ -4,7 +4,8 @@
   "description": "- [Solve the system of linear equations using the matrix method](https://ua.onlinemschool.com/math/assistance/equation/matr/)\r - [Solve the system of linear equations using the Gauss method](https://ua.onlinemschool.com/math/assistance/equation/gaus/)\r - [Solve the system of linear equations using the Cramer method](https://ua.onlinemschool.com/math/assistance/equation/kramer/)",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm start app.js"
   },
   "repository": {
     "type": "git",
