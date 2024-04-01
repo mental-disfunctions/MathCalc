@@ -45,14 +45,13 @@
         <table>
             <tr>
                 <th>Expression</th>
-                <td><input type="text" id="expr" /></td>
+                <td><input type="text" id="expr" /> <button id="solve">Solve</button></td>
             </tr>
             <tr>
                 <th>Pretty print</th>
                 <td><div id="pretty"></div></td>
             </tr>
         </table>
-    
 
         <script>
             const expr = document.getElementById("expr");
@@ -72,8 +71,7 @@
             expr.value = "";
             pretty.innerHTML = "";
             pretty.appendChild(mj(math.parse(expr.value).toTex({ parenthesis: parenthesis })));
-
-            expr.onblur = async function () {
+            document.getElementById("solve").addEventListener("click", async function () {
                 let node = null;
                 let response = "";
                 await fetch("/polinom-lagrandg", {
@@ -101,7 +99,7 @@
                 MathJax.typesetClear();
                 pretty.innerHTML = "";
                 pretty.appendChild(mj(latex));
-            };
+            });
         </script>
     </body>
 </html>
