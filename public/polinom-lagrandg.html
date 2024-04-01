@@ -73,7 +73,7 @@
             pretty.innerHTML = "";
             pretty.appendChild(mj(math.parse(expr.value).toTex({ parenthesis: parenthesis })));
 
-            expr.oninput = async function () {
+            expr.onblur = async function () {
                 let node = null;
                 let response = "";
                 await fetch("/polinom-lagrandg", {
