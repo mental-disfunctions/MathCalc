@@ -73,6 +73,7 @@
             pretty.appendChild(mj(math.parse(expr.value).toTex({ parenthesis: parenthesis })));
             document.getElementById("solve").addEventListener("click", async function () {
                 this.textContent = "Wait!";
+                this.setAttribute("disabled", "");
                 let node = null;
                 let response = "";
                 await fetch("/polinom-lagrandg", {
@@ -92,6 +93,7 @@
                     })
                     .then((result) => {
                         response = result;
+                        this.removeAttribute("disabled");
                         this.textContent = "Solve";
                         return result;
                     });
