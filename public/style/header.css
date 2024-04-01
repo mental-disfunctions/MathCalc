@@ -15,14 +15,10 @@ header nav ul{
     display: flex;
 }
 .head__logo{
-    background-image: url(../image/logo.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 70px;
+    height: 60px;
     width: 120px;
     cursor: default;
     user-select: none;
-    margin-top: 10px;
 }
 /* header .head__logo:hover {
     background-image:  url(../image/trap-shit.gif);

@@ -17,21 +17,17 @@ header.header {
     display: flex;
     align-items: center;
     padding: 0 2%;
-    gap: 10%;
     z-index: 99;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    justify-content: center;
 }
 
 header .logo {
-    background-image: url(../image/logo.png);
-    background-size: contain;
-    background-repeat: no-repeat;
     height: 70px;
-    width: 120px;
     cursor: default;
     user-select: none;
     display: flex;
-    float: left;
 }
 
 .justify-c-center {
@@ -122,6 +118,7 @@ bl{
     text-align: center;
     padding-top: 10px;
     font-weight: bold;
+    text-decoration: line-through;
 }
 .menu a{
     color: white;
@@ -130,10 +127,6 @@ bl{
     width: 170px;
 }
 
-header .logo:hover {
-    transform: scale(1.2);
-    transition: .2s;
-}
 nav {
     font-size: 16px;
     display: flex;
