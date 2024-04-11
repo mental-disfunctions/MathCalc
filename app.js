@@ -6,11 +6,13 @@ const app = express();
 const port = process.env.PORT || 3001;
 
 const userRoutes = require("./routes/user");
+const algorithmsRoutes = require("./routes/algorithms");
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use(userRoutes);
+app.use(algorithmsRoutes);
 
 app.use((req, res, next) => {
     res.status(404).sendFile(path.join(__dirname, "views", "404.html"));
