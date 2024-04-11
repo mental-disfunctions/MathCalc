@@ -21,7 +21,7 @@ function getValue(scriptname) {
         };
 
         if (func && n && a && b) {
-            fetch(`http://localhost:3001/integral/${scriptname}`, requestOptions)
+            fetch(`integral/${scriptname}`, requestOptions)
                 .then((response) => response.json())
                 .then((result) => setTable(result))
                 .catch((error) => console.error(error));
