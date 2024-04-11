@@ -8,7 +8,7 @@ function getValue(){
     myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
 
     const urlencoded = new URLSearchParams();
-    urlencoded.append("func", func);
+    urlencoded.append("func", Function("x", "return " + func));
     urlencoded.append("n", n);
     urlencoded.append("range", `[${a}, ${b}]`);
 
