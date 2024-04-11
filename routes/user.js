@@ -3,24 +3,26 @@ const express = require("express");
 const router = express.Router();
 
 router.get("/polinom-lagrandg", (req, res) => {
-    res.type(".html").sendFile(path.join(__dirname, "..", "public", "pages", "polinom-lagrandg.html"));
+    res.type(".html").sendFile(
+        path.join(__dirname, "..", "public", "pages", "chismeth", "polinom-lagrandg.html")
+    );
 });
 
 router.get("/integral/leftRectanglesMethod", (req, res) => {
     res.type(".html").sendFile(
-        path.join(__dirname, "..", "public", "pages", "leftRectanglesMethod.html")
+        path.join(__dirname, "..", "public", "pages", "chismeth", "leftRectanglesMethod.html")
     );
 });
 
 router.get("/integral/rightRectanglesMethod", (req, res) => {
     res.type(".html").sendFile(
-        path.join(__dirname, "..", "public", "pages", "rightRectanglesMethod.html")
+        path.join(__dirname, "..", "public", "pages", "chismeth", "rightRectanglesMethod.html")
     );
 });
 
 router.get("/integral/centerRectanglesMethod", (req, res) => {
     res.type(".html").sendFile(
-        path.join(__dirname, "..", "public", "pages", "centerRectanglesMethod.html")
+        path.join(__dirname, "..", "public", "pages", "chismeth", "centerRectanglesMethod.html")
     );
 });
 
