@@ -435,9 +435,6 @@ main-cont div div button{
     navtele{
         display: flex;
     }
-    nav{
-        display: none;
-    }
     carusel{
         background: white;
         display: none;
@@ -474,4 +471,8 @@ main-cont div div button{
 .list__pawn{
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.blue-col{
+    opacity: 0;
 }
