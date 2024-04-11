@@ -3,7 +3,7 @@ const express = require("express");
 const router = express.Router();
 
 router.get("/polinom-lagrandg", (req, res) => {
-    res.type(".html").sendFile(path.join(__dirname, "..", "public", "polinom-lagrandg.html"));
+    res.type(".html").sendFile(path.join(__dirname, "..", "public", "pages", "polinom-lagrandg.html"));
 });
 
 router.get("/integral/leftRectanglesMethod", (req, res) => {
