@@ -44,4 +44,33 @@ Algorithms.Integral.rightRectanglesMethod = function (func, n, [a, b]) {
     return resultTable;
 };
 
+Algorithms.Integral.centerRectanglesMethod = function (func, n, [a, b]) {
+    const resultTable = createTableForCenterMethod(func, n, a, b);
+    let result = 0;
+    for (let i = 0; i < Object.keys(resultTable).length - 1; i++) {
+        result += resultTable[i].yI;
+    }
+    resultTable.result = math
+        .multiply(math.bignumber(result), math.bignumber(resultTable.h))
+        .toNumber();
+    return resultTable;
+};
+
+function createTableForCenterMethod(func, n, a, b) {
+    const resultTable = {};
+    const h = math
+        .divide(math.subtract(math.bignumber(b), math.bignumber(a)), math.bignumber(n))
+        .toNumber();
+    const h1 = math.divide(math.bignumber(h), math.bignumber(2)).toNumber();
+    let xI = math.add(math.bignumber(a), math.bignumber(h1));
+    resultTable[0] = { xI: xI.toNumber(), yI: func(xI) };
+
+    for (let i = 1; i < n; i++) {
+        xI = math.add(math.bignumber(xI), math.bignumber(h));
+        resultTable[i] = { xI: xI.toNumber(), yI: func(xI) };
+    }
+    resultTable.h = h;
+    return resultTable;
+}
+
 module.exports = Algorithms;
