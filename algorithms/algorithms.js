@@ -32,4 +32,16 @@ function createTable(func, n, a, b) {
     return resultTable;
 }
 
+Algorithms.Integral.rightRectanglesMethod = function (func, n, [a, b]) {
+    const resultTable = createTable(func, n, a, b);
+    let result = 0;
+    for (let i = 1; i < Object.keys(resultTable).length - 1; i++) {
+        result += resultTable[i].yI;
+    }
+    resultTable.result = math
+        .multiply(math.bignumber(result), math.bignumber(resultTable.h))
+        .toNumber();
+    return resultTable;
+};
+
 module.exports = Algorithms;
