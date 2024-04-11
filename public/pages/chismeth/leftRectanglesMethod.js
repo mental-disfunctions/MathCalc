@@ -22,8 +22,26 @@ function getValue(){
 
     if(func && n && a && b){
 fetch("http://localhost:3001/integral/leftRectanglesMethod", requestOptions)
-  .then((response) => response.text())
-  .then((result) => console.log(result))
+  .then((response) => response.json())
+  .then((result) => setTable(result))
   .catch((error) => console.error(error));
+} 
 }
+
+function setTable(result) {
+    console.log(result);
+	var table = document.getElementById("table_output").getElementsByTagName('tbody')[0];
+	table.innerHTML = "";
+
+	Object.keys(result).forEach(function (key) {
+		var row = table.insertRow();
+		var obj = result[key];
+		Object.keys(obj).forEach(function (prop) {
+			var cell = row.insertCell();
+			cell.textContent = obj[prop];
+			cell.setAttribute("data-title", prop);
+		});
+	});
+    ci
 }
+
