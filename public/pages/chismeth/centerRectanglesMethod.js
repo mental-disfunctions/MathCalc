@@ -1,4 +1,3 @@
-
 document.getElementById("startbtn").addEventListener("click", getValue);
 function getValue() {
     const func = document.getElementById("func").value;
@@ -22,7 +21,7 @@ function getValue() {
     };
 
     if (func && n && a && b) {
-        fetch("http://localhost:3001/integral/leftRectanglesMethod", requestOptions)
+        fetch("http://localhost:3001/integral/centerRectanglesMethod", requestOptions)
             .then((response) => response.json())
             .then((result) => setTable(result))
             .catch((error) => console.error(error));

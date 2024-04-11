@@ -22,7 +22,7 @@ function getValue() {
     };
 
     if (func && n && a && b) {
-        fetch("http://localhost:3001/integral/leftRectanglesMethod", requestOptions)
+        fetch("http://localhost:3001/integral/rightRectanglesMethod", requestOptions)
             .then((response) => response.json())
             .then((result) => setTable(result))
             .catch((error) => console.error(error));
