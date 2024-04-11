@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>math.js | pretty printing with MathJax</title>
+
+        <script src="https://unpkg.com/mathjs@12.4.1/lib/browser/math.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+        <style>
+            body,
+            html,
+            table td,
+            table th,
+            input[type="text"] {
+                font-size: 11pt;
+                font-family: verdana, arial, sans-serif;
+            }
+
+            h1 {
+                font-size: 11pt;
+            }
+
+            input[type="text"] {
+                padding: 5px;
+                width: 400px;
+            }
+
+            table {
+                border-collapse: collapse;
+            }
+
+            table td,
+            table th {
+                padding: 5px;
+                border: 1px solid lightgray;
+            }
+
+            table th {
+                background-color: lightgray;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th>Expression</th>
+                <td><input type="text" id="expr" /> <button id="solve">Solve</button></td>
+            </tr>
+            <tr>
+                <th>Pretty print</th>
+                <td><div id="pretty"></div></td>
+            </tr>
+        </table>
+
+        <script>
+            const expr = document.getElementById("expr");
+            const pretty = document.getElementById("pretty");
+            let parenthesis = "keep";
+            let implicit = "hide";
+
+            function streamToString(stream) {
+                return new Response(stream).text();
+            }
+
+            const mj = function (tex) {
+                return MathJax.tex2svg(tex, { em: 16, ex: 6, display: false });
+            };
+
+            // initialize with an example expression
+            expr.value = "";
+            pretty.innerHTML = "";
+            pretty.appendChild(mj(math.parse(expr.value).toTex({ parenthesis: parenthesis })));
+            document.getElementById("solve").addEventListener("click", async function () {
+                this.textContent = "Wait!";
+                this.setAttribute("disabled", "");
+                let node = null;
+                let response = "";
+                await fetch("/polinom-lagrandg", {
+                    method: "POST",
+                    mode: "cors",
+                    cache: "no-cache",
+                    credentials: "same-origin",
+                    headers: {
+                        "Content-Type": "application/x-www-form-urlencoded",
+                    },
+                    redirect: "follow",
+                    referrerPolicy: "no-referrer",
+                    body: document.getElementById("expr").value,
+                })
+                    .then((response) => {
+                        return streamToString(response.body);
+                    })
+                    .then((result) => {
+                        response = result;
+                        this.removeAttribute("disabled");
+                        this.textContent = "Solve";
+                        return result;
+                    });
+                console.log(response);
+                const latex = response;
+
+                MathJax.typesetClear();
+                pretty.innerHTML = "";
+                pretty.appendChild(mj(latex));
+            });
+        </script>
+    </body>
+</html>

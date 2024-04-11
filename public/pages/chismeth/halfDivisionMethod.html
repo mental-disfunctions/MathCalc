@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../../css/style.css">
+	<link rel="stylesheet" href="../../css/table.css">
+	<link rel="stylesheet" href="../../css/klava.css">
+	<title>Метод половинного поділу</title>
+	<style>
+		@media(max-width: 560px) {
+			carusel {
+				background: #4357F0;
+			}
+
+			.list {
+				box-shadow: rgba(0, 0, 0, 0.27) 0px 6px 6px;
+			}
+
+			carusel div a {
+				display: none;
+			}
+
+			main-cont {
+				padding: 0;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<header class="header">
+
+		<a href="../index.html" class="logo"></a>
+		<nav>
+			<a href="../../index.html">
+				<div class="photo_calc"></div>
+			</a>
+		</nav>
+	</header>
+	<maint class="bgc-grey">
+		<carusel class="d-flex justify-c-spaceeven">
+			<a href="#">
+				<div class="blue-col">Алгебра</div>
+			</a>
+			<a href="#">
+				<div class="blue-col">Геометрія</div>
+			</a>
+			<a href="chismeth-page.html">
+				<div>Чисельні методи</div>
+			</a>
+			<a href="#">
+				<div class="blue-col">Економіка</div>
+			</a>
+		</carusel>
+		<main-cont class="bgc-grey d-block">
+			<div class="tasks-inout">
+				<div class="head-word-inout">Input</div>
+				<div class="container-input-field margint50">
+					<div class="input-field">
+						<div class=""><label for="priklad">Приклад:</label></div>
+						<div class=""><input type="text" id="priklad" name="fname"><br><br></div>
+					</div>
+					<div class="input-field">
+						<div class=""><label for="start-point">Початкова точка:</label></div>
+						<div class=""><input type="text" id="spoint" name="spoint"><br><br></div>
+					</div>
+					<div class="input-field">
+						<div class=""><label for="last-point">Кінцева точка:</label></div>
+						<div class=""><input type="text" id="lpoint" name="lpoint"><br><br></div>
+					</div>
+					<div class="input-field">
+						<div class=""><label for="epsilon">Епсилон:</label></div>
+						<div class=""><input type="text" id="epsilon" name="epsilon"><br><br></div>
+					</div>
+				</div>
+				
+				<div class="button">
+					<button onclick="getValue()">Туда його</button>
+				</div>
+			</div>
+			<div class="tasks-inout height371px bgc-grey paddingt30">
+				<div class="head-word-inout">Output</div>
+				<div class="d-flex justify-c-center table-container">
+					<table class="" id="table_output">
+						<thead>
+							<tr>
+								<th>n</th>
+								<th>-</th>
+								<th>+</th>
+								<th>x=a+b/2</th>
+								<th>f(x)</th>
+								<th>|b - a|</th>
+							</tr>
+						</thead>
+						<tbody>
+							<!-- Сюди будуть додаватися рядки та значення -->
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</main-cont>
+	</maint>
+</body>
+
+<script src="../js/main.js"></script>
+<script src="../js/algorithms.js"></script>
+<script src="../js/script.js"></script>
+<script src="../js/klava.js"></script>
+
+</html>
+
+<!-- <div class="klava">
+
+					<div class="btns">
+						<div class="row">
+							<button id="ce" onclick="backspc()">Del</button>
+							<button class="btn">x</button>
+							<button class="btn">(</button>
+							<button class="btn">)</button>
+							<button id="ac" onclick="priklad.value=''">Clear</button>
+						</div>
+
+						<div class="row">
+							<button class="btn">sin</button>
+							<button class="btn">π</button>
+							<button class="btn">7</button>
+							<button class="btn">8</button>
+							<button class="btn">9</button>
+							<button class="btn">÷</button>
+						</div>
+
+						<div class="row">
+							<button class="btn">cos</button>
+							<button class="btn">log</button>
+							<button class="btn">4</button>
+							<button class="btn">5</button>
+							<button class="btn">6</button>
+							<button class="btn">х</button>
+						</div>
+
+						<div class="row">
+							<button class="btn">tan</button>
+							<button class="btn">√</button>
+							<button class="btn">1</button>
+							<button class="btn">2</button>
+							<button class="btn">3</button>
+							<button class="btn">-</button>
+						</div>
+
+						<div class="row">
+							<button class="btn">e</button>
+							<button class="btn">x <span style="position: relative; bottom: .4em; right: .1em;">y</span>
+							</button>
+							<button class="btn">0</button>
+							<button class="btn">.</button>
+							<button id="eval" onclick="result_from_klava()">=</button>
+							<button class="btn">+</button>
+						</div>
+					</div>
+				</div> -->
