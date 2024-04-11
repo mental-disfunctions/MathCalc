@@ -1,5 +1,5 @@
 document.getElementById("startbtn").addEventListener("click", getValue);
-function getValue() {
+function getValue(scriptname) {
     const func = document.getElementById("func").value;
     const n = document.getElementById("n").value;
     const a = document.getElementById("a").value;
@@ -21,7 +21,7 @@ function getValue() {
     };
 
     if (func && n && a && b) {
-        fetch("http://localhost:3001/integral/centerRectanglesMethod", requestOptions)
+        fetch(`http://localhost:3001/integral/${scriptname}`, requestOptions)
             .then((response) => response.json())
             .then((result) => setTable(result))
             .catch((error) => console.error(error));
@@ -43,4 +43,6 @@ function setTable(result) {
             cell.setAttribute("data-title", i);
         }
     }
+    document.getElementById("h").textContent = result.h;
+    document.getElementById("result").textContent = result.result;
 }

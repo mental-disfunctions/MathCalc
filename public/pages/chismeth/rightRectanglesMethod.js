@@ -44,4 +44,6 @@ function setTable(result) {
             cell.setAttribute("data-title", i);
         }
     }
+    document.getElementById("h").textContent = result.h;
+    document.getElementById("result").textContent = result.result;
 }
