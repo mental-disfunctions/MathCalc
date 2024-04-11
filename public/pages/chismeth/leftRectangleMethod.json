@@ -1,0 +1,5 @@
+{
+    "func": "function (x){ return Math.sqrt(0.3 * x + 1.2) }",
+    "n": "10",
+    "range": "[1.5, 2.3]"
+}
