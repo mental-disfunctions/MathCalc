@@ -12,4 +12,14 @@ router.post("/integral/leftRectanglesMethod", (req, res) => {
     );
 });
 
+router.post("/integral/rightRectanglesMethod", (req, res) => {
+    res.json(
+        algorithms.Integral.rightRectanglesMethod(
+            new Function("return " + req.body.func)(),
+            Number(req.body.n),
+            JSON.parse(req.body.range)
+        )
+    );
+});
+
 module.exports = router;
