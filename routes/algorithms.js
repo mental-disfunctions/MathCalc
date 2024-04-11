@@ -1,5 +1,5 @@
 const express = require("express");
-const mathjs = require(mathjs);
+const mathjs = require("mathjs");
 const router = express.Router();
 const algorithms = require("../algorithms/algorithms");
 
