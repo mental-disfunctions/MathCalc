@@ -1,5 +1,7 @@
+const { forEach } = require("mathjs");
+
 document.getElementById("startbtn").addEventListener("click", getValue);
-function getValue(){
+function getValue() {
     const func = document.getElementById("func").value;
     const n = document.getElementById("n").value;
     const a = document.getElementById("a").value;
@@ -17,31 +19,30 @@ function getValue(){
         method: "POST",
         headers: myHeaders,
         body: urlencoded,
-        redirect: "follow"
+        redirect: "follow",
     };
 
-    if(func && n && a && b){
-fetch("http://localhost:3001/integral/leftRectanglesMethod", requestOptions)
-  .then((response) => response.json())
-  .then((result) => setTable(result))
-  .catch((error) => console.error(error));
-} 
+    if (func && n && a && b) {
+        fetch("http://localhost:3001/integral/leftRectanglesMethod", requestOptions)
+            .then((response) => response.json())
+            .then((result) => setTable(result))
+            .catch((error) => console.error(error));
+    }
 }
 
 function setTable(result) {
-    console.log(result);
-	var table = document.getElementById("table_output").getElementsByTagName('tbody')[0];
-	table.innerHTML = "";
+    const table = document.getElementById("table_output").getElementsByTagName("tbody")[0];
+    table.innerHTML = "";
 
-	Object.keys(result).forEach(function (key) {
-		var row = table.insertRow();
-		var obj = result[key];
-		Object.keys(obj).forEach(function (prop) {
-			var cell = row.insertCell();
-			cell.textContent = obj[prop];
-			cell.setAttribute("data-title", prop);
-		});
-	});
-    ci
+    for (let i = 0; i < Object.keys(result).length - 2; i++) {
+        const row = table.insertRow();
+        const cell = row.insertCell();
+        cell.textContent = i;
+        cell.setAttribute("data-title", i);
+        for (const value of Object.values(result[i])) {
+            const cell = row.insertCell();
+            cell.textContent = value;
+            cell.setAttribute("data-title", i);
+        }
+    }
 }
-
