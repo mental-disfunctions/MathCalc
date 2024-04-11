@@ -1,31 +1,33 @@
-document.getElementById("startbtn").addEventListener("click", getValue);
+document.getElementById("startbtn").addEventListener("click", getValue("centerRectanglesMethod"));
 function getValue(scriptname) {
-    const func = document.getElementById("func").value;
-    const n = document.getElementById("n").value;
-    const a = document.getElementById("a").value;
-    const b = document.getElementById("b").value;
+    return () => {
+        const func = document.getElementById("func").value;
+        const n = document.getElementById("n").value;
+        const a = document.getElementById("a").value;
+        const b = document.getElementById("b").value;
 
-    const myHeaders = new Headers();
-    myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
+        const myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
 
-    const urlencoded = new URLSearchParams();
-    urlencoded.append("func", Function("x", "return " + func));
-    urlencoded.append("n", n);
-    urlencoded.append("range", `[${a}, ${b}]`);
+        const urlencoded = new URLSearchParams();
+        urlencoded.append("func", Function("x", "return " + func));
+        urlencoded.append("n", n);
+        urlencoded.append("range", `[${a}, ${b}]`);
 
-    const requestOptions = {
-        method: "POST",
-        headers: myHeaders,
-        body: urlencoded,
-        redirect: "follow",
+        const requestOptions = {
+            method: "POST",
+            headers: myHeaders,
+            body: urlencoded,
+            redirect: "follow",
+        };
+
+        if (func && n && a && b) {
+            fetch(`http://localhost:3001/integral/${scriptname}`, requestOptions)
+                .then((response) => response.json())
+                .then((result) => setTable(result))
+                .catch((error) => console.error(error));
+        }
     };
-
-    if (func && n && a && b) {
-        fetch(`http://localhost:3001/integral/${scriptname}`, requestOptions)
-            .then((response) => response.json())
-            .then((result) => setTable(result))
-            .catch((error) => console.error(error));
-    }
 }
 
 function setTable(result) {
