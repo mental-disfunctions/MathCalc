@@ -25,7 +25,3 @@ function halfDivisionMethod(func = "Math.pow(x, 2) - Math.exp(-x)", a = 0.5, b =
 	}
 	return resultTable;
 }
-// Test
-// for (let i = 1; i < Object.keys(halfDivisionMethod()).length + 1; i++) {
-//     console.log(halfDivisionMethod()[i]);
-// }
