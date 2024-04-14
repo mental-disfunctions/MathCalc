@@ -10,11 +10,11 @@ const math = create(all, config);
 
 Algorithms.Integral.leftRectanglesMethod = function (func, n, [a, b]) {
     const resultTable = createTable(func, n, a, b);
-    let result = 0;
+    let result = math.bignumber(0);
     for (let i = 0; i < Object.keys(resultTable).length - 2; i++) {
-        result += resultTable[i].yI;
+        result = result.add(resultTable[i].yI).toNumber();
     }
-    resultTable.result = result * resultTable.h;
+    resultTable.result = math.multiply(math.bignumber(result), math.bignumber(resultTable.h)).toNumber();
     return resultTable;
 };
 
@@ -36,7 +36,7 @@ Algorithms.Integral.rightRectanglesMethod = function (func, n, [a, b]) {
     const resultTable = createTable(func, n, a, b);
     let result = 0;
     for (let i = 1; i < Object.keys(resultTable).length - 1; i++) {
-        result += resultTable[i].yI;
+        result = result.add(resultTable[i].yI).toNumber();
     }
     resultTable.result = math
         .multiply(math.bignumber(result), math.bignumber(resultTable.h))
@@ -48,12 +48,11 @@ Algorithms.Integral.centerRectanglesMethod = function (func, n, [a, b]) {
     const resultTable = createTableForCenterMethod(func, n, a, b);
     let result = 0;
     for (let i = 0; i < Object.keys(resultTable).length - 1; i++) {
-        result += Number(resultTable[i].yI);
+        result = result.add(resultTable[i].yI).toNumber();
     }
     resultTable.result = math
         .multiply(math.bignumber(result), math.bignumber(resultTable.h))
         .toNumber();
-    console.log(resultTable);
     return resultTable;
 };
 
