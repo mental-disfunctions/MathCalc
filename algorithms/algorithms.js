@@ -12,9 +12,11 @@ Algorithms.Integral.leftRectanglesMethod = function (func, n, [a, b]) {
     const resultTable = createTable(func, n, a, b);
     let result = math.bignumber(0);
     for (let i = 0; i < Object.keys(resultTable).length - 2; i++) {
-        result = result.add(resultTable[i].yI).toNumber();
+        result = math.add(math.bignumber(result), math.bignumber(resultTable[i].yI));
     }
-    resultTable.result = math.multiply(math.bignumber(result), math.bignumber(resultTable.h)).toNumber();
+    resultTable.result = math
+        .multiply(math.bignumber(result), math.bignumber(resultTable.h))
+        .toNumber();
     return resultTable;
 };
 
@@ -25,7 +27,8 @@ function createTable(func, n, a, b) {
         .toNumber();
     let xI = math.bignumber(a);
     for (let i = 0; i < n + 1; i++) {
-        resultTable[i] = { xI: xI.toNumber(), yI: func(xI).toNumber() };
+        const yI = func(xI);
+        resultTable[i] = { xI: xI.toNumber(), yI: typeof yI === "object" ? yI.toNumber() : yI };
         xI = math.add(math.bignumber(xI), math.bignumber(h));
     }
     resultTable.h = h;
@@ -36,7 +39,7 @@ Algorithms.Integral.rightRectanglesMethod = function (func, n, [a, b]) {
     const resultTable = createTable(func, n, a, b);
     let result = 0;
     for (let i = 1; i < Object.keys(resultTable).length - 1; i++) {
-        result = result.add(resultTable[i].yI).toNumber();
+        result = math.add(result, resultTable[i].yI);
     }
     resultTable.result = math
         .multiply(math.bignumber(result), math.bignumber(resultTable.h))
@@ -48,7 +51,7 @@ Algorithms.Integral.centerRectanglesMethod = function (func, n, [a, b]) {
     const resultTable = createTableForCenterMethod(func, n, a, b);
     let result = 0;
     for (let i = 0; i < Object.keys(resultTable).length - 1; i++) {
-        result = result.add(resultTable[i].yI).toNumber();
+        result = math.add(math.bignumber(result), math.bignumber(resultTable[i].yI));
     }
     resultTable.result = math
         .multiply(math.bignumber(result), math.bignumber(resultTable.h))
@@ -63,11 +66,13 @@ function createTableForCenterMethod(func, n, a, b) {
         .toNumber();
     const h1 = math.divide(math.bignumber(h), math.bignumber(2)).toNumber();
     let xI = math.add(math.bignumber(a), math.bignumber(h1));
-    resultTable[0] = { xI: xI.toNumber(), yI: func(xI).toNumber() };
+    let yI = func(xI);
+    resultTable[0] = { xI: xI.toNumber(), yI: typeof yI === "object" ? yI.toNumber() : yI };
 
     for (let i = 1; i < n; i++) {
         xI = math.add(math.bignumber(xI), math.bignumber(h));
-        resultTable[i] = { xI: xI.toNumber(), yI: func(xI).toNumber() };
+        yI = func(xI);
+        resultTable[i] = { xI: xI.toNumber(), yI: typeof yI === "object" ? yI.toNumber() : yI};
     }
     resultTable.h = h;
     return resultTable;

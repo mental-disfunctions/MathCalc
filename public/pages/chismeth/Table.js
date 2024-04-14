@@ -23,11 +23,13 @@ function getValue(scriptname) {
         if (func && n && a && b) {
             fetch(`/integral/${scriptname}`, requestOptions)
                 .then((response) => response.json())
-                .then((result) => setTable(result))
+                .then((result) => {
+                    setTable(result);
+                    return result;
+                })
                 .catch((error) => console.error(error));
         }
     };
-    
 }
 
 function setTable(result) {
