@@ -1,46 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:'arial';
+    font-family: "arial";
     list-style: none;
     text-decoration: none;
     font-weight: bold;
 }
-body{
-    background-color: #F6F6F6;
+body {
+    background-color: #f6f6f6;
 }
-.photo_calc{
+.photo_calc {
     height: 30px;
     width: 30px;
     margin-left: auto;
     margin-right: auto;
-    transition: .2s;
+    transition: 0.2s;
 }
-.photo_calc{
+.photo_calc {
     background-image: url(../image/calculator1.png);
 }
-.photo_calc:hover{
+.photo_calc:hover {
     background-image: url(../image/calculator2.png);
 }
-.photo_calc{
+.photo_calc {
     background-size: contain;
     background-repeat: no-repeat;
 }
-image{
+image {
     position: absolute;
     top: 0;
 }
-.cont{  
+.cont {
     padding: 0% 10%;
     width: 100%;
     flex-grow: 1;
     flex-direction: column;
     min-height: 81vh;
-    overflow: hidden; 
+    overflow: hidden;
 }
-.just-c-center{
+.just-c-center {
     display: flex;
     justify-content: center;
 }
@@ -52,7 +52,7 @@ image{
     margin-top: 30px;
 }
 .grid-item:hover {
-    transition: .2s;
+    transition: 0.2s;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 .grid-item {
@@ -66,11 +66,14 @@ image{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: .5s;
+    transition: 0.5s;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.photo_geo, .photo_algeb, .photo_chismeth, .photo_accounting{
+.photo_geo,
+.photo_algeb,
+.photo_chismeth,
+.photo_accounting {
     background-repeat: no-repeat;
     background-size: contain;
     height: 100px;
@@ -89,22 +92,18 @@ image{
 }
 .photo_geo {
     background-image: url(../image/geo.png);
-
 }
 
 .photo_algeb {
     background-image: url(../image/math.png);
-
 }
 
 .photo_chismeth {
     background-image: url(../image/chisel.png);
-
 }
 
 .photo_accounting {
     background-image: url(../image/accounting.png);
-
 }
 .text-a-center {
     text-align: center;
@@ -116,41 +115,39 @@ image{
     font-size: 25px;
 }
 
-.margint30{
+.margint30 {
     margin-top: 30px;
 }
-div ul li{
+div ul li {
     font-size: 15px;
 }
 /*PC*/
 @media (min-width: 993px) {
-
 }
 /*Laptop*/
 @media (min-width: 769px) and (max-width: 992px) {
-
 }
 /*Mobile*/
 
 @media (max-width: 612px) {
-    .calculators-container{
+    .calculators-container {
         row-gap: 2em;
         grid-template: repeat(4, 1fr) / 1fr;
         justify-content: center;
     }
 }
 @media (max-width: 1100px) and (min-width: 612px) {
-    .calculators-container{
+    .calculators-container {
         grid-template: repeat(2, 1fr) / repeat(2, 1fr);
         row-gap: 2em;
     }
 }
 
-.blur{
+.blur {
     filter: blur(5px);
 }
 
-.notwork{
+.notwork {
     position: absolute;
     background-image: url(../image/NOTWORKING.png);
     height: 250px;
