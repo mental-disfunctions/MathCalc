@@ -1,6 +1,2 @@
 @import url(reset-style.css);
-@import url(header.css);
-
-.wrapper{
-    width: 100%;
-}
+@import url(stick.css);
