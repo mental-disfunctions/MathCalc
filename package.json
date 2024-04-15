@@ -5,6 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:sass": "node-sass -w public/css/style.sass public/css/stick.css",
     "start": "node app.js"
   },
   "repository": {
@@ -19,7 +20,8 @@
   "homepage": "https://github.com/mental-disfunctions/MathCalc#readme",
   "dependencies": {
     "express": "^4.19.2",
-    "mathjs": "^12.4.1"
+    "mathjs": "^12.4.1",
+    "node-sass": "^9.0.0"
   },
   "engines": {
     "node": "20.12.0"
