@@ -4,6 +4,11 @@
   font-size: 15px;
 }
 
+.wrapper {
+  width: 100%;
+  height: 100%;
+}
+
 body {
   background-color: #F0F6F6;
 }
@@ -93,9 +98,9 @@ main-cont {
   margin-right: auto;
   transition: 0.2s;
 }
-
 .photo_calc:hover {
-  background: url("../image/calculator2.png");
+  background: url("../image/calculator2.png") no-repeat;
+  background-size: contain;
 }
 
 .tasks-inout {
@@ -184,7 +189,7 @@ carusel {
 
 carusel a div {
   font-size: 1.22em;
-  font-weight: 600;
+  font-weight: bold;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   color: white;
   height: 100%;
@@ -218,7 +223,6 @@ bl {
   transition: 0.5s;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-
 .grid-item:hover {
   transition: 0.2s;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
