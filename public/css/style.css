@@ -39,12 +39,6 @@ nav {
   display: flex;
 }
 
-maint {
-  background: white;
-  width: 100%;
-  height: 1000px;
-}
-
 .d-flex {
   display: flex;
 }
@@ -188,10 +182,17 @@ carusel {
   background: #4357f0;
 }
 
-carusel a {
-  font: 600 1.22em "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+carusel a div {
+  font-size: 1.22em;
+  font-weight: 600;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   color: white;
-  padding-top: 10px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+carusel a div:hover {
+  color: rgb(204, 204, 204);
 }
 
 input {
@@ -248,4 +249,4 @@ bl {
   carusel a {
     font-size: 1em;
   }
-}/*# sourceMappingURL=stick.css.map */
+}/*# sourceMappingURL=style.css.map */
