@@ -1,4 +1,4 @@
-# MathHuinya
+# MathCalc
 
 ## Useful links
 - [Solve the system of linear equations using the matrix method](https://ua.onlinemschool.com/math/assistance/equation/matr/)
